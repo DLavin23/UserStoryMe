@@ -1,0 +1,42 @@
+
+
+
+  
+<h1 class="title">User Stories</h1>
+<hr />
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Priority</th>
+        <th>Frequency</th>
+        <th>View</th>
+        <th>Edit</th>
+        <th>Destroy</th>
+      </tr>
+    </thead>
+    <tbody>
+    <% @stories.each do |story| %>
+      <tr>
+        <td><%= story.name %></td>
+        <td><%= story.description %></td>
+        <td><%= story.priority %></td>
+        <td><%= story.frequency %></td>
+        <td><%= link_to 'Show', story, class: "btn btn-primary btn-mini" %></td>
+        <td><%= link_to 'Edit', edit_story_path(story), class: "btn btn-primary btn-mini"  %></td>
+        <td><%= link_to 'Destroy', story, class: "btn btn-danger btn-mini",  confirm: 'Are you sure?', method: :delete %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+
+<%= link_to 'New User Story', new_story_path, class: "btn btn-primary" %>
+
+
+
+
+
+
+
+

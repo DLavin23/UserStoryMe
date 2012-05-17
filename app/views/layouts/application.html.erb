@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%= render 'layouts/head' %>
+</head>
+<body>
+  <%= render 'layouts/navigation' %>
+  <div class="container span10 offset2">
+    <div class="hero-unit">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
+  </div> <!-- /container -->
+
+  <!-- Javascripts
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <%= javascript_include_tag "application" %>
+
+</body>
+</html>
