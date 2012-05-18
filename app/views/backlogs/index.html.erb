@@ -4,20 +4,25 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>Name</th>
       <th>Description</th>
       <th>Status</th>
+      <th>View</th>
+      <th>Edit</th>
+      <th>Destroy</th>
     </tr>
   </thead>
   <tbody>
   <% @backlogs.each do |backlog| %>
     <tr>
-      <td><%= backlog.name %></td>
       <td><%= backlog.description %></td>
       <td><%= backlog.status %></td>
+      <td><%= link_to 'Show', backlog, class: "btn btn-primary btn-mini" %></td>
+      <td><%= link_to 'Edit', edit_backlog_path(backlog), class: "btn btn-primary btn-mini"  %></td>
+      <td><%= link_to 'Destroy', backlog, class: "btn btn-danger btn-mini",  confirm: 'Are you sure?', method: :delete %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
       
+<p><%= link_to 'New Backlog', new_backlog_path, class: "btn btn-primary" %></p>
       

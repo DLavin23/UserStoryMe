@@ -45,7 +45,7 @@ class StoriesController < ApplicationController
     @story = Story.find(params[:id])
     @story.destroy
     respond_to do |format|
-      format.html { redirect_to stories_url}
+      format.html { redirect_to stories_url, notice: "As a USER, your story has been deleted!"}
     end
   end
 end

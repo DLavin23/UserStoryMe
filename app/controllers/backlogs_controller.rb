@@ -22,6 +22,7 @@ class BacklogsController < ApplicationController
   end
 
   def show
+    @backlog = Backlog.find(params[:id])
   end
 
   def edit
@@ -31,6 +32,11 @@ class BacklogsController < ApplicationController
   end
 
   def destroy
+    @backlog = Backlog.find(params[:id])
+    @backlog.destroy
+    respond_to do |format|
+      format.html { redirect_to backlogs_url, notice: "As a USER, your backlog has been deleted!"}
+    end
   end
 
 

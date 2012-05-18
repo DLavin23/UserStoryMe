@@ -1,5 +1,41 @@
 <h1 class="title">New User Story</h1>
 <hr />
+<%= form_for(@story) do |f| %>
+  <% if @story.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:
+      </h2>
+      <ul>
+      <% @story.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-<%= render "form" %>
+  <p>As a...<%= f.text_field :name %> I want to... <%= f.text_field :description %></p>
+
+<!-- <%= render "form" %> -->
 <%= link_to 'Back', stories_path, class: "btn btn-primary" %>
+
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="filed">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+  <div class="field">
+    <%= f.label :priority %><br />
+    <%= f.text_field :priority %>
+  </div>
+  <div class="field">
+    <%= f.label :frequency %><br />
+    <%= f.text_field :frequency %>
+  </div>
+  <div class="actions">
+    <%= f.submit %> 
+  </div>
+<% end %>
