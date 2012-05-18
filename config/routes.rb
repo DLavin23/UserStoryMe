@@ -1,8 +1,10 @@
 StoryMap::Application.routes.draw do
-  
+
+
   devise_for :users
 
   resources :stories
+  resources :backlogs
 
   root to: 'pages#home'
   

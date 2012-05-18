@@ -3,7 +3,7 @@ class StoriesController < ApplicationController
   before_filter :authenticate_user!
   
   def index
-    @stories = Story.all
+    @stories = current_user.stories
   end
 
   def show
@@ -16,6 +16,7 @@ class StoriesController < ApplicationController
 
   def create
     @story = Story.new(params[:story])
+    @story.user = current_user
     respond_to do |format|
       if @story.save
         format.html { redirect_to @story, notice: "As a USER, your story has been created!"}

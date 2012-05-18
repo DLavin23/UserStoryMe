@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120517155405) do
+ActiveRecord::Schema.define(:version => 20120518002329) do
+
+  create_table "backlogs", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.text     "description"
+    t.string   "status"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
 
   create_table "stories", :force => true do |t|
     t.string   "name"
@@ -20,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20120517155405) do
     t.string   "frequency"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.integer  "user_id"
   end
 
   create_table "users", :force => true do |t|

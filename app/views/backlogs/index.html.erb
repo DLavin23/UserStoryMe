@@ -1,0 +1,23 @@
+<h1>List of Backlogs</h1>
+<hr />
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @backlogs.each do |backlog| %>
+    <tr>
+      <td><%= backlog.name %></td>
+      <td><%= backlog.description %></td>
+      <td><%= backlog.status %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+      
+      
