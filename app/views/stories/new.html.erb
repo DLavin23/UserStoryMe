@@ -12,30 +12,36 @@
       </ul>
     </div>
   <% end %>
-
-  <p>As a...<%= f.text_field :name %> I want to... <%= f.text_field :description %></p>
-
-<!-- <%= render "form" %> -->
-<%= link_to 'Back', stories_path, class: "btn btn-primary" %>
-
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="filed">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :priority %><br />
-    <%= f.text_field :priority %>
-  </div>
-  <div class="field">
-    <%= f.label :frequency %><br />
-    <%= f.text_field :frequency %>
-  </div>
-  <div class="actions">
-    <%= f.submit %> 
+  <div class="home-row">
+    <div class="row">
+      <div class="span3">
+        <h3>As a...</h3>
+        <hr />
+        <p><%= f.text_field :name %></p>
+      </div>
+      <div class="span3">
+        <h3>I want to...</h3>
+        <hr />
+        <p><%= f.text_field :description %></p>
+      </div>
+      <div class="span3">
+        <h3>Assign a Priority</h3>
+        <hr />
+        <p><%= f.text_field :priority %></p>
+      </div>
+      <div class="span3">
+        <h3>Assign a Frequency</h3>
+        <hr />
+        <p><%= f.text_field :frequency %></p>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>
+
+<!-- <%= render "form" %> -->
+
+<%= link_to 'Back', stories_path, class: "btn btn-primary" %>
+
