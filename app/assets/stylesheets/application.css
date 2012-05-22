@@ -16,6 +16,15 @@
 	float: right;
 }
 
+.brand-two {
+/*	color: #46433A;*/
+	font-weight: bold;
+}
+
+.brand-three {
+	font-weight: bold;
+}
+
 .title {
 	text-align: center;
 }

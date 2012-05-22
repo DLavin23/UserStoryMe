@@ -25,9 +25,18 @@
         <p><%= f.text_field :description %></p>
       </div>
       <div class="span3">
-        <h3>Assign a Priority</h3>
-        <hr />
-        <p><%= f.text_field :priority %></p>
+        <div class="control-group">
+          <h3>Assign a Priority</h3>
+          <hr />
+          <div class="controls">
+            <p><%= f.text_field :priority, class: "control-label" %></p>
+            <!-- <select id="select01">
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select> -->
+          </div>
+        </div>
       </div>
       <div class="span3">
         <h3>Assign a Frequency</h3>

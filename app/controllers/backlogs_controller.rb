@@ -26,9 +26,18 @@ class BacklogsController < ApplicationController
   end
 
   def edit
+    @backlog = Backlog.find(params[:id])
   end
 
   def update
+    @backlog = Backlog.find(params[:id])
+    respond_to do |format|
+      if @backlog.update_attributes(params[:backlog])
+        format.html { redirect_to @backlog, notice: "As a USER, your backlog has been updated!"}
+      else
+        format.html { render action: 'edit' }
+      end
+    end
   end
 
   def destroy

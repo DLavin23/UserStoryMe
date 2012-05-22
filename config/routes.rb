@@ -1,6 +1,8 @@
 StoryMap::Application.routes.draw do
 
 
+  resources :authentications
+
   devise_for :users
 
   resources :stories
@@ -12,6 +14,7 @@ StoryMap::Application.routes.draw do
   
   match 'login', to: 'pages#getstarted'
   
+  match '/auth/:provider/callback', to: 'authentications#create'
   
 end
 
