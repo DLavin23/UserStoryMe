@@ -13,9 +13,51 @@
 */
 
 
+/****************************** Global ***********************************/
 
-.start{
+.title {
+	text-align: center;
+	font-family: Pacifico;
+}
+
+.subtitle {
+	text-align: center;
+	font-style:italic;
+}
+
+.capitalize {
+	text-transform: uppercase;
+	font-weight:bold;
+	color: #648E69;
+}
+
+.hero-unit {
+	-moz-box-shadow: 10px 10px 5px #888;
+	-webkit-box-shadow: 10px 10px 5px #888;
+	box-shadow: 10px 10px 5px #888;
+	margin-top:20px;
+}
+
+.divider-vertical {
+	color: #fff;
+}
+
+/************************* Home Page Styles *****************************/
+
+.start-button {
 	float: right;
+}
+
+.home-row {
+	margin-left:150px;
+}
+
+
+/*************************** Navigation *********************************/
+
+.brand {
+/*	font-family: 'Permanent Marker', cursive;*/
+	font-family:Pacifico;
 }
 
 .brand-two {
@@ -29,20 +71,8 @@
 	font-family: DymaxionScript;
 }
 
-.title {
-	text-align: center;
-	font-family: Pacifico;
-}
 
-.subtitle {
-	text-align: center;
-	font-style:italic;
-}
-
-.brand {
-/*	font-family: 'Permanent Marker', cursive;*/
-	font-family:Pacifico;
-}
+/*************************** Signin/Signup ******************************/
 
 .twitter-signin {
 	margin-left: 150px;
@@ -53,19 +83,11 @@
 	margin-left:300px;
 }
 
-.home-row {
-	margin-left:150px;
-
-}
-
-.divider-vertical {
-	color: #fff;
-}
-
 .getstarted {
 	text-align: center;
 }
 
+/****************************** Footer ***********************************/
 #social {
 	float:right;
 /*	margin-right:120px;*/
@@ -76,10 +98,5 @@
 /*	margin-left:120px;*/
 }
 
-.hero-unit {
-	-moz-box-shadow: 10px 10px 5px #888;
-	-webkit-box-shadow: 10px 10px 5px #888;
-	box-shadow: 10px 10px 5px #888;
-	margin-top:40px;
-}
+
 

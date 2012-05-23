@@ -1,5 +1,7 @@
 class BacklogsController < ApplicationController
   
+  before_filter :authenticate_user!
+  
   def index
     @backlogs = current_user.backlogs
   end
