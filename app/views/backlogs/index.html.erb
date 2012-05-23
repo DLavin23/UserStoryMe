@@ -1,7 +1,7 @@
 <h1 class="title">List of Backlogs</h1>
 <hr />
 
-<% @backlogs.each do |backlog| %>
+
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -9,31 +9,28 @@
       <th>Description</th>
       <th>Status</th>
       <th>View</th>
-      <th>Edit</th>
       <th>Destroy</th>
     </tr>
   </thead>
   <tbody>
+    <% @backlogs.each do |backlog| %>
     <tr>
       <td><%= backlog.name %></td>
       <td><%= backlog.description %></td>
       <td><%= backlog.status %></td>
-      <td><%= link_to 'Show', backlog, class: "btn btn-primary btn-mini" %></td>
-      <td><%= link_to 'Edit', edit_backlog_path(backlog), class: "btn btn-primary btn-mini"  %></td>
+      <td><%= link_to 'View', backlog, class: "btn btn-primary btn-mini" %></td>
       <td><%= link_to 'Destroy', backlog, class: "btn btn-danger btn-mini",  confirm: 'Are you sure?', method: :delete %></td>
     </tr>
-<% end %>
+    <% end %>
   </tbody>
 </table>
 
 
-
-
-
+<% @backlogs.each do |backlog| %>
 <div class="accordion" id="accordion2">
   <div class="accordion-group">
     <div class="accordion-heading">
-      <% @backlogs.each do |backlog| %>
+
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
         <%= backlog.name %> 
       </a>
@@ -59,13 +56,14 @@
               <td><%= link_to 'Edit', edit_backlog_path(backlog), class: "btn btn-primary btn-mini"  %></td>
               <td><%= link_to 'Destroy', backlog, class: "btn btn-danger btn-mini",  confirm: 'Are you sure?', method: :delete %></td>
             </tr>
-      <% end %>
+
           </tbody>
         </table>
       </div>
     </div>
   </div>
 </div>
+<% end %>
       
 <p><%= link_to 'New Backlog', new_backlog_path, class: "btn btn-primary" %></p>
       

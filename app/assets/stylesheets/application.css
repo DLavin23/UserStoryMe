@@ -12,6 +12,8 @@
  *= require_tree .
 */
 
+
+
 .start{
 	float: right;
 }
@@ -19,18 +21,32 @@
 .brand-two {
 /*	color: #46433A;*/
 	font-weight: bold;
+	font-family: DymaxionScript;
 }
 
 .brand-three {
 	font-weight: bold;
+	font-family: DymaxionScript;
 }
 
 .title {
 	text-align: center;
+	font-family: Pacifico;
+}
+
+.subtitle {
+	text-align: center;
+	font-style:italic;
 }
 
 .brand {
 /*	font-family: 'Permanent Marker', cursive;*/
+	font-family:Pacifico;
+}
+
+.twitter-signin {
+	margin-left: 150px;
+	margin-top:50px;
 }
 
 .form {
@@ -64,5 +80,6 @@
 	-moz-box-shadow: 10px 10px 5px #888;
 	-webkit-box-shadow: 10px 10px 5px #888;
 	box-shadow: 10px 10px 5px #888;
+	margin-top:40px;
 }
 
