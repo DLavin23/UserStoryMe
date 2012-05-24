@@ -1,1 +1,17 @@
 UserStory.Me is the simplest way to create, store, and share Story Maps with your team.  
+
+Outstanding:
+
+User should be able to create a permalink of their backlogs
+User should be able to share permalink with team members via email, twitter, etc.
+User stories should belong to a backlog.
+Add testing
+Add mailer
+
+
+
+Front-end Enhancements:
+signin modal
+icons
+copy
+collapsable table(s)

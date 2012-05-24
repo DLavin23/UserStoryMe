@@ -35,13 +35,16 @@
 	-moz-box-shadow: 10px 10px 5px #888;
 	-webkit-box-shadow: 10px 10px 5px #888;
 	box-shadow: 10px 10px 5px #888;
-	margin-top:20px;
+
 }
 
 .divider-vertical {
 	color: #fff;
 }
 
+.well {
+	background:#918B85;
+}
 /************************* Home Page Styles *****************************/
 
 .start-button {
@@ -71,7 +74,9 @@
 	font-family: DymaxionScript;
 }
 
-
+.identity {
+	text-align: center;
+}
 /*************************** Signin/Signup ******************************/
 
 .twitter-signin {
