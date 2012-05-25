@@ -17,31 +17,26 @@
       <div class="span3">
         <h3>As a...</h3>
         <hr />
-        <p><%= f.text_field :name %></p>
+        <p><%= f.text_field :name, :placeholder => 'User, Admin, etc.' %></p>
       </div>
       <div class="span3">
         <h3>I want to...</h3>
         <hr />
-        <p><%= f.text_field :description %></p>
+        <p><%= f.text_field :description, :placeholder => 'Save User Stories' %></p>
       </div>
       <div class="span3">
         <div class="control-group">
           <h3>Assign a Priority</h3>
           <hr />
           <div class="controls">
-            <p><%= f.text_field :priority, class: "control-label" %></p>
-            <!-- <select id="select01">
-              <option>Low</option>
-              <option>Medium</option>
-              <option>High</option>
-            </select> -->
+            <p><%= f.text_field :priority, :placeholder => 'High, Med, Low' %></p>
           </div>
         </div>
       </div>
       <div class="span3">
         <h3>Assign a Frequency</h3>
         <hr />
-        <p><%= f.text_field :frequency %></p>
+        <p><%= f.text_field :frequency, placeholder: 'Daily, Weekly, etc' %></p>
       </div>
     </div>
     <div class="actions">

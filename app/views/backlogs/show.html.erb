@@ -11,8 +11,20 @@
 <p>
   <%= @backlog.status %>
 </p>
+<hr/>
+
+
+
+
+
+
+
+
+
 
 <%= link_to 'Edit', edit_backlog_path(@backlog) %> |
 <%= link_to 'Back', backlogs_path %>
+<hr />
+<%= link_to 'New User Story', new_story_path, :class => 'btn btn-primary' %>
 
 <!-- show list of stories here -->

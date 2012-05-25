@@ -4,9 +4,13 @@ Outstanding:
 
 User should be able to create a permalink of their backlogs
 User should be able to share permalink with team members via email, twitter, etc.
-User stories should belong to a backlog.
+User stories should belong to a backlog
+Backlog should have many stories
+Finish twitter auth
 Add testing
 Add mailer
+Add file uploader (images, screenshots, mockups, etc.)
+include import/export options
 
 
 
@@ -15,3 +19,5 @@ signin modal
 icons
 copy
 collapsable table(s)
+scrollspy
+

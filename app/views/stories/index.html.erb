@@ -12,7 +12,6 @@
         <th>Priority</th>
         <th>Frequency</th>
         <th>View</th>
-        <th>Edit</th>
         <th>Destroy</th>
       </tr>
     </thead>
@@ -24,7 +23,6 @@
         <td><%= story.priority %></td>
         <td><%= story.frequency %></td>
         <td><%= link_to 'Show', story, class: "btn btn-primary btn-mini" %></td>
-        <td><%= link_to 'Edit', edit_story_path(story), class: "btn btn-primary btn-mini"  %></td>
         <td><%= link_to 'Destroy', story, class: "btn btn-danger btn-mini",  confirm: 'Are you sure?', method: :delete %></td>
       </tr>
     <% end %>

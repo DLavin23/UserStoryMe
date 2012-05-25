@@ -19,7 +19,7 @@ class StoriesController < ApplicationController
     @story.user = current_user
     respond_to do |format|
       if @story.save
-        format.html { redirect_to @story, notice: "As a USER, your story has been created!"}
+        format.html { redirect_to stories_path, notice: "As a USER, your story has been created!"}
       else
         format.html { render action: "new" }
       end
