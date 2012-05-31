@@ -1,41 +1,17 @@
 <h1 class="title">List of Backlogs</h1>
+<br>
 <hr />
-
-
-<table class="table table-bordered">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Status</th>
-      <th>View</th>
-      <th>Destroy</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @backlogs.each do |backlog| %>
-    <tr>
-      <td><%= backlog.name %></td>
-      <td><%= backlog.description %></td>
-      <td><%= backlog.status %></td>
-      <td><%= link_to 'View', backlog, class: "btn btn-primary btn-mini" %></td>
-      <td><%= link_to 'Destroy', backlog, class: "btn btn-danger btn-mini", confirm: 'Are you sure?', method: :delete %></td>
-    </tr>
-    <% end %>
-  </tbody>
-</table>
-
-
-<!-- <% @backlogs.each do |backlog| %>
-<div class="accordion" id="accordion2">
+<br>
+<% @backlogs.each do |backlog| %>
+<div class="accordion" >
   <div class="accordion-group">
     <div class="accordion-heading">
 
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+      <a class="accordion-toggle" data-toggle="collapse" href="#backlog<%= backlog.id %>">
         <%= backlog.name %> 
       </a>
     </div>
-    <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">
+    <div id= "backlog<%= backlog.id %>" class="accordion-body collapse" style="height: 0px; ">
       <div class="accordion-inner">
         <table class="table table-bordered">
           <thead>
@@ -63,7 +39,7 @@
     </div>
   </div>
 </div>
-<% end %> -->
-      
+<% end %>
+<br>      
 <p><%= link_to 'New Backlog', new_backlog_path, class: "btn btn-primary" %></p>
       

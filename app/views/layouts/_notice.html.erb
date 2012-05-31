@@ -1,11 +1,13 @@
 <!-- edit or change error message in the locales file -->
 <!-- initializers folder, devise to change validations -->
 
-<div class="alert alert-info">
-  <a class="close" data-dismiss="alert" href="#"><p class="alert"><%= alert %></p></a>
-</div>
-<!-- <p class="notice"><%= notice %></p> -->
+<% if alert %>
+  <p class="alert"><%= alert %></p>
+<% end %>
 
+<% if notice %>
+  <p class="notice"><%= notice %></p>
+<% end %>
 
 
 
